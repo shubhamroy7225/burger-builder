@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Buildcontrols } from "../../coponents/Burger/BuildControls/BuildControls";
 import Burger from "../../coponents/Burger/Burger";
+import Ordersummary from "../../coponents/Burger/OrderSummary/OrderSummary";
+import Modal from "../../coponents/UI/Modal/Modal";
 import Aux from "../../hoc/Aux";
 const BurgerBuilder = (props) => {
   const [ingreadient, setIngredient] = useState({
@@ -64,6 +66,9 @@ const BurgerBuilder = (props) => {
   }
   return (
     <Aux>
+      <Modal>
+        <Ordersummary ingredients={ingreadient}></Ordersummary>
+      </Modal>
       <Burger ingreadient={ingreadient} />
       <Buildcontrols
         ingreadientAdded={addIngreadientHandler}
