@@ -6,9 +6,10 @@ export default function Buildcontrol(props) {
             <div className="BuildControl">
                 <div className="Label">
                     {props.label}
-                </div>
+                </div>{' '}
+                <p>
                 <button className="Less" onClick={props.deleted} disabled={props.disabled}>less</button>
-                <button className="More" onClick={props.added}>more</button>
+                <button className="More" onClick={props.added}>more</button></p>
             </div>
         </>
     )

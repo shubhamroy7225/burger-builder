@@ -42,3 +42,6 @@
     background-color: #DAA972;
     color: white;
 }
+.BuildControl p{
+    display: flex;
+}

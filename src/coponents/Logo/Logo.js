@@ -1,9 +1,7 @@
 import React from 'react'
 import BurgerImg from "../../assets/images/burger-logo.png"
 import "./Logo.css"
-export default function Logo(props) {
-    
-
+ function Logo(props) {
     return (
         <>
             <div className="Logo">
@@ -12,3 +10,4 @@ export default function Logo(props) {
         </>
     )
 }
+export default Logo

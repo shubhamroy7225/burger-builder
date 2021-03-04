@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Aux from "../../hoc/Aux";
+import Sidedrawer from "../Navigation/SideDrawer/SideDrawer";
 import Toolbar from "../Navigation/Toolbar/Toolbar";
-import "./Layout.css"
-const layout = (props) => {
+import Backdrop from "../UI/Backdrop/Backdrop";
+import "./Layout.css";
+const Layout = (props) => {
+  const [backdrop, setBackdrop] = useState(false);
+  const closeSidedrawer = () => {
+    setBackdrop(false);
+  };
+  const drawerToggleHandler=()=>{
+    setBackdrop(!backdrop)
+  }
   return (
-  <Aux>
-      <div>
-        <Toolbar></Toolbar>
-        SideDrawer, Backdrop</div>
-      <main className="Content">
-          {props.children}
-      </main>
-  </Aux>
+    <Aux>
+      <Toolbar drawerToggle={drawerToggleHandler}/>
+      <Sidedrawer open={backdrop} closed={closeSidedrawer} />
+      <main className="Content">{props.children}</main>
+    </Aux>
   );
 };
-export default layout;
+export default Layout;
