@@ -19,6 +19,19 @@ const BurgerBuilder = (props) => {
     totalPrice: 4,
   });
   const [purchasable, setPurchasable] = useState(false);
+  const [state, setState] = useState({
+    show: false,
+    Hide: false,
+  });
+  const modalHandler = () => {
+    setState({ ...state, show: true });
+  };
+  const closeModal = () => {
+    setState({ ...state, show: false });
+  };
+  const continueBuying = () => {
+    alert("Continue buy!");
+  };
   const updatePurchasable = (ingreadient) => {
     const ingreadients = { ...ingreadient };
     const sum = Object.keys(ingreadients)
@@ -66,8 +79,13 @@ const BurgerBuilder = (props) => {
   }
   return (
     <Aux>
-      <Modal>
-        <Ordersummary ingredients={ingreadient}></Ordersummary>
+      <Modal show={state.show} closeModal={closeModal}>
+        <Ordersummary
+          ingredients={ingreadient}
+          closeModal={closeModal}
+          continueBuy={continueBuying}
+          price={price.totalPrice}
+        ></Ordersummary>
       </Modal>
       <Burger ingreadient={ingreadient} />
       <Buildcontrols
@@ -76,6 +94,7 @@ const BurgerBuilder = (props) => {
         disabled={disableInfo}
         totalPrice={price.totalPrice}
         purchasable={purchasable}
+        modalHandler={modalHandler}
       />
     </Aux>
   );
