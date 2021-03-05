@@ -3,7 +3,8 @@ import { Buildcontrols } from "../../coponents/Burger/BuildControls/BuildControl
 import Burger from "../../coponents/Burger/Burger";
 import Ordersummary from "../../coponents/Burger/OrderSummary/OrderSummary";
 import Modal from "../../coponents/UI/Modal/Modal";
-import Aux from "../../hoc/Aux";
+import Aux from "../../hoc/Aux/Aux";
+
 const BurgerBuilder = (props) => {
   const [ingreadient, setIngredient] = useState({
     salad: 0,

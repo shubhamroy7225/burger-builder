@@ -1,7 +1,7 @@
 
 import './App.css';
 import BurgerBuilder from './container/BurgerBuilder/BurgerBuilder';
-import Layout from './coponents/Layout/Layout';
+import Layout from './hoc/Layout/Layout';
 
 function App() {
   return (

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import Aux from "../../hoc/Aux";
-import Sidedrawer from "../Navigation/SideDrawer/SideDrawer";
-import Toolbar from "../Navigation/Toolbar/Toolbar";
-import Backdrop from "../UI/Backdrop/Backdrop";
+import Aux from "../Aux/Aux";
+import Sidedrawer from "../../coponents/Navigation/SideDrawer/SideDrawer";
+import Toolbar from "../../coponents/Navigation/Toolbar/Toolbar";
 import "./Layout.css";
 const Layout = (props) => {
   const [backdrop, setBackdrop] = useState(false);

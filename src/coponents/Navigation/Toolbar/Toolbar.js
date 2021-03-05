@@ -6,7 +6,7 @@ import "./Toolbar.css";
 function Toolbar(props) {
   return (
     <header className="Toolbar">
-      <Drawertoggle clicked={props.drawerToggle}/>
+      <Drawertoggle clicked={props.drawerToggle} />
       <Logo />
       <nav className="DesktopOnly">
         <Navigationitems />

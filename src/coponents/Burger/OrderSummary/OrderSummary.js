@@ -1,5 +1,5 @@
 import React from "react";
-import Aux from "../../../hoc/Aux";
+import Aux from "../../../hoc/Aux/Aux";
 import Button from "../../UI/Button/Button";
 import "./OrderSummary.css"
 function Ordersummary(props) {
@@ -11,7 +11,6 @@ function Ordersummary(props) {
       </span>
     );
   });
-
   return (
     <Aux>
       <h1>Your Order</h1>
